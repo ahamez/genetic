@@ -16,7 +16,7 @@ defmodule Speller do
 
   @impl true
   def fitness(%Chromosome{genes: genes}) do
-    String.bag_distance(@target, to_string(genes))
+    String.jaro_distance(@target, to_string(genes))
   end
 
   @impl true
