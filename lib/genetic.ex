@@ -34,7 +34,7 @@ defmodule Genetic do
         temperature: temperature
     }
 
-    # IO.write("\rCurrent best chromosome fitness: #{inspect(best_chromosome.fitness)}")
+    IO.write("\rCurrent best chromosome fitness: #{inspect(best_chromosome.fitness)}")
     write_stats(conf.csv_file, ctx)
 
     if problem.terminate?(population, ctx.generation, ctx.temperature) do
